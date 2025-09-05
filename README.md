@@ -1,69 +1,44 @@
-# Definição do Método Analítico para Análise de Sentimentos em Companhias Aéreas
+# Sistema de Recomendacao de Livros
 
-### Sumário
-- [Introdução](#introdução)
-- [Metadados](#metadados)
-- [Metadatas](#Metadata)
+### Sumario
+- [Introducao](#introducao)
+- [Fonte dos Dados](#fonte-dos-dados)
+- [Metodo de Coleta](#metodo-de-coleta)
+- [Formato do Arquivo](#formato-do-arquivo)
+- [Licenca de Uso](#licenca-de-uso)
 - [Colaboradores](#colaboradores)
 
 ---
 
-### Introdução
+### Introducao
 
-No cenário atual, onde a jornada de migração internacional exige cada vez mais planejamento e decisões bem informadas, o uso da análise de sentimentos tem se consolidado como uma estratégia eficaz para compreender a percepção dos consumidores em tempo real. As redes sociais, especialmente o X (antigo Twitter), tornaram-se espaços essenciais para que os usuários compartilhem suas experiências, elogios e frustrações — oferecendo, assim, um valioso repositório de dados sobre empresas e serviços.
+O crescimento exponencial da producao editorial e a digitalizacao do acesso a livros ampliaram significativamente as possibilidades de leitura, mas tambem geraram um desafio para leitores que precisam escolher entre milhares de opcoes disponiveis. Nesse cenario, os sistemas de recomendacao surgem como ferramentas essenciais para personalizar a experiencia do usuario, sugerindo conteudos que se alinham ao seu perfil e preferencias de leitura.
 
-Neste contexto, o presente projeto tem como objetivo aplicar técnicas de processamento de linguagem natural (NLP) e aprendizado de máquina para analisar as opiniões de brasileiros sobre diferentes companhias aéreas, com foco na experiência de voos entre o Brasil e os Estados Unidos. A iniciativa será conduzida pela Decolar, uma das maiores empresas de viagens da América Latina, fundada em 1999 e com presença em mais de 20 países. Reconhecida por seu papel inovador no turismo digital, a Decolar oferece uma ampla gama de serviços, incluindo passagens aéreas, hospedagens, pacotes de viagem e suporte personalizado ao cliente.
-
-Com base em dados coletados diretamente do X, este estudo pretende identificar sentimentos positivos, negativos e neutros em relação às principais companhias aéreas utilizadas por brasileiros, fornecendo insights relevantes para orientar futuras decisões de viagem. A partir da análise desses sentimentos, será possível detectar padrões de preferência, pontos críticos na experiência dos passageiros e sugestões de melhorias que podem ser integradas aos serviços da Decolar.
-
-Dessa forma, a proposta não apenas reforça o compromisso da empresa com a excelência no atendimento e a personalização da jornada do cliente, mas também evidencia como a inteligência artificial pode ser uma poderosa aliada na construção de soluções mais humanas, eficientes e alinhadas às reais necessidades de quem deseja realizar o sonho de migrar para os Estados Unidos com segurança e tranquilidade.
-
+Para este projeto, sera utilizado o **Book Recommendation Dataset**, disponivel na plataforma Kaggle, que reune informacoes de usuarios, livros e avaliacoes. O conjunto de dados contem aproximadamente 270 mil usuarios, mais de 270 mil livros e mais de 1 milhao de avaliacoes, permitindo a aplicacao de diferentes tecnicas de recomendacao, como filtragem colaborativa, recomendacao baseada em conteudo e abordagens hibridas. O uso deste dataset possibilita o desenvolvimento de um sistema capaz de apoiar a democratizacao da leitura, tornando o acesso ao conhecimento mais inclusivo e alinhado aos Objetivos de Desenvolvimento Sustentavel (ODS), em especial o **ODS 4 – Educacao de Qualidade**.
 
 ---
-
-### Metadados
 
 ### Fonte dos Dados
 
-Os dados foram obtidos do conjunto ["Twitter US Airline Sentiment"](https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment) disponível no Kaggle.
-
-### Método de Coleta
-
-Os tweets foram coletados em fevereiro de 2015 e classificados manualmente por sentimento (positivo, neutro ou negativo) em relação às principais companhias aéreas dos EUA.
-
-### Formato do Arquivo
-
-- **Tipo de Arquivo**: CSV (Comma-Separated Values).
-
-### Licença de Uso
-
-Os dados são disponibilizados no Kaggle para fins de pesquisa, análise e desenvolvimento, sendo permitida sua utilização para esses propósitos. No entanto, o uso comercial ou a redistribuição sem autorização expressa pode estar sujeito a restrições.
-
-### Contato
-
-Para mais informações ou dúvidas sobre o uso dos dados, consulte a [página do conjunto de dados no Kaggle](https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment) ou utilize os canais de comunicação da plataforma.
+Os dados foram obtidos do conjunto [Book Recommendation Dataset](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset) disponivel no Kaggle.
 
 ---
 
-### Metadata
+### Metodo de Coleta
 
-| Nome da Coluna                 | Tipo    | Descrição                                                                                                                                         |
-|--------------------------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| **tweet_id**                   | int64   | Identificador único do tweet.                                                                                                                     |
-| **airline_sentiment**          | object  | Classificação do sentimento do tweet (por exemplo, positivo, negativo ou neutro).                                                                |
-| **airline_sentiment_confidence** | float64 | Nível de confiança associado à classificação do sentimento.                                                                                     |
-| **negativereason**             | object  | Motivo associado à classificação negativa, quando aplicável (nem todos os tweets possuem esse valor).                                             |
-| **negativereason_confidence**  | float64 | Nível de confiança na identificação do motivo negativo.                                                                                         |
-| **airline**                  | object  | Nome da companhia aérea mencionada no tweet.                                                                                                      |
-| **airline_sentiment_gold**   | object  | Anotação de sentimento padrão (gold standard) para validação, disponível para uma amostra restrita.                                                 |
-| **name**                     | object  | Nome ou identificador do usuário que postou o tweet.                                                                                              |
-| **negativereason_gold**      | object  | Anotação gold do motivo negativo, usada para validação, disponível em poucos casos.                                                               |
-| **retweet_count**            | int64   | Número de vezes que o tweet foi retweetado.                                                                                                       |
-| **text**                     | object  | Conteúdo textual completo do tweet.                                                                                                               |
-| **tweet_coord**              | object  | Coordenadas geográficas (latitude e longitude) do tweet, quando disponíveis.                                                                      |
-| **tweet_created**            | object  | Data e hora em que o tweet foi criado.                                                                                                            |
-| **tweet_location**           | object  | Localização informada no tweet, quando disponível.                                                                                              |
-| **user_timezone**            | object  | Fuso horário do usuário que postou o tweet, quando disponível.                                                                                    |
+Os dados foram coletados a partir de interacoes reais de usuarios com livros, incluindo avaliacoes, titulos, autores e informacoes demograficas (anonimizadas).
+
+---
+
+### Formato do Arquivo
+
+- **Tipo de Arquivo**: CSV (Comma-Separated Values)
+
+---
+
+### Licenca de Uso
+
+Os dados sao disponibilizados no Kaggle para fins de pesquisa, analise e desenvolvimento. O uso comercial ou a redistribuicao sem autorizacao expressa pode estar sujeito a restricoes.
 
 ---
 
@@ -76,7 +51,4 @@ Para mais informações ou dúvidas sobre o uso dos dados, consulte a [página d
 - Gabriel Henrique Titanegro Zanelatto  
 
 **Professor**  
-- Felipe Albino Dos Santos
-
-
-<br>
+- Carolina Toledo Ferraz
