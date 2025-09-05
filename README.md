@@ -10,13 +10,8 @@
 
 ### Introdução
 
-No cenário atual, onde a jornada de migração internacional exige cada vez mais planejamento e decisões bem informadas, o uso da análise de sentimentos tem se consolidado como uma estratégia eficaz para compreender a percepção dos consumidores em tempo real. As redes sociais, especialmente o X (antigo Twitter), tornaram-se espaços essenciais para que os usuários compartilhem suas experiências, elogios e frustrações — oferecendo, assim, um valioso repositório de dados sobre empresas e serviços.
-
-Neste contexto, o presente projeto tem como objetivo aplicar técnicas de processamento de linguagem natural (NLP) e aprendizado de máquina para analisar as opiniões de brasileiros sobre diferentes companhias aéreas, com foco na experiência de voos entre o Brasil e os Estados Unidos. A iniciativa será conduzida pela Decolar, uma das maiores empresas de viagens da América Latina, fundada em 1999 e com presença em mais de 20 países. Reconhecida por seu papel inovador no turismo digital, a Decolar oferece uma ampla gama de serviços, incluindo passagens aéreas, hospedagens, pacotes de viagem e suporte personalizado ao cliente.
-
-Com base em dados coletados diretamente do X, este estudo pretende identificar sentimentos positivos, negativos e neutros em relação às principais companhias aéreas utilizadas por brasileiros, fornecendo insights relevantes para orientar futuras decisões de viagem. A partir da análise desses sentimentos, será possível detectar padrões de preferência, pontos críticos na experiência dos passageiros e sugestões de melhorias que podem ser integradas aos serviços da Decolar.
-
-Dessa forma, a proposta não apenas reforça o compromisso da empresa com a excelência no atendimento e a personalização da jornada do cliente, mas também evidencia como a inteligência artificial pode ser uma poderosa aliada na construção de soluções mais humanas, eficientes e alinhadas às reais necessidades de quem deseja realizar o sonho de migrar para os Estados Unidos com segurança e tranquilidade.
+O crescimento exponencial da produção editorial e a digitalização do acesso a livros têm ampliado significativamente as possibilidades de leitura, mas também gerado um desafio para leitores que precisam escolher entre milhares de opções disponíveis. Nesse cenário, os sistemas de recomendação surgem como ferramentas essenciais para personalizar a experiência do usuário, sugerindo conteúdos que se alinham ao seu perfil e preferências de leitura.
+Para este projeto, será utilizado o Book Recommendation Dataset, disponível na plataforma Kaggle, que reúne informações de usuários, livros e avaliações. O conjunto de dados contém aproximadamente 270 mil usuários, mais de 270 mil livros e mais de 1 milhão de avaliações, permitindo a aplicação de diferentes técnicas de recomendação, como filtragem colaborativa, recomendação baseada em conteúdo e abordagens híbridas. O uso deste dataset possibilita o desenvolvimento de um sistema capaz de apoiar a democratização da leitura, tornando o acesso ao conhecimento mais inclusivo e alinhado aos Objetivos de Desenvolvimento Sustentável (ODS), em especial o ODS 4 – Educação de Qualidade.
 
 
 ---
@@ -25,7 +20,7 @@ Dessa forma, a proposta não apenas reforça o compromisso da empresa com a exce
 
 ### Fonte dos Dados
 
-Os dados foram obtidos do conjunto ["Twitter US Airline Sentiment"](https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment) disponível no Kaggle.
+Os dados foram obtidos do conjunto ["Book Recommendation Dataset"](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset) disponível no Kaggle.
 
 ### Método de Coleta
 
